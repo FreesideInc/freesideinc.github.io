@@ -1,0 +1,36 @@
+
+<html>
+  <head>
+    <title>Freeside Inc.</title>
+    <meta name="description" content="An example of a simple storyboard">
+    <script src="xhttps://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@df3e8672b77568845e5e360f54f4456fd4829a38/dist/aframe-master.min.js"></script>
+    
+    <script src="xhttps://rawgit.com/ngokevin/aframe-layout-component/master/dist/aframe-layout-component.min.js"></script>
+    <script src="x//jsbin.com/cocemez.js"></script>
+  </head>
+  <body>
+    <!-- 
+      Aframe works by placing the `<a-scene></scene>` tag in 
+      the body of your HTML.
+
+      To get my storyboard component working, scene element 
+      must have the storyboard attribute declared on it. 
+    -->
+    <a-scene background="color: #f5ee51">
+
+        <a-assets>
+    <img id="my-image" src="http://free-side.com/freeside.png"> 
+  </a-assets>
+
+  <!-- Using the asset management system. -->
+  <a-image position="2 0.5 -3" src="#my-image" material="transparent: true" ></a-image>
+      <a-image position="0 0.5 -3" src="https://www.freelogodesign.org/Content/img/logo-samples/flooop.png" xmaterial="xtransparent: true"></a-image> 
+           <a-box position="-1 0.5 3" rotation="0 45 0" color="#4CC3D9" shadow></a-box>
+      <a-sphere position="0 1.25 5" radius="1.25" color="#EF2D5E" shadow></a-sphere>
+      <a-cylinder position="1 0.75 3" radius="0.5" height="1.5" color="#FFC65D" shadow></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow></a-plane>
+
+    </a-scene>
+  </body>
+</html>
