@@ -1,0 +1,81 @@
+
+<html>
+  <head>
+    <title>Freeside Inc.</title>
+
+    <!--script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@c1f49cebab967ab29ab34e444bcaa66b0e6c942d/dist/aframe-master.min.js"></script-->
+    <script src="https://raw.githubusercontent.com/aframevr/aframe/master/dist/aframe-master.min.js"></script>
+    <!--script src="/aframe-master.min.js"></script-->
+      <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+
+      <style>
+        html, body {
+          border:0;margin:0;padding:0;
+          font-family:  Candara, Roboto, sans-serif;
+          text-align: center;
+        }
+        .panel {
+          background: #efefef;
+          width: 100%;
+          height: 97vh;
+          text-align: center;
+          display: grid;
+        }
+        .foot {
+          height: 60pt;
+          background: #efefef;
+        }
+        .middle {
+          margin: auto;
+        }
+        .logo {
+          width: 18vw; height: auto;
+        }
+        a-scene { width:100%; height: calc(100vh - 30pt);}
+      </style>
+    
+  </head>
+  <body>
+
+    <a-scene background="color: #fefefe" embedded>
+
+        <a-assets>
+          <img id="freesideimg" src="/freeside.png"> 
+        </a-assets>
+
+     <a-entity environment="preset: checkerboard;
+     dressing:towers; 
+     groundTexture: 'none'; 
+     grid: 2x2; 
+     groundColor: #d0d0d0; 
+     flatShading: false;
+     skyColor: #fff; 
+     lighting: distant;
+     shadow: true;
+     ground:canyon;
+     dressing: none;
+     fog: 0;    
+     dressingColor: #fff;
+     horizonColor: #f5f5f5" ></a-entity>
+      <a-image position="0 1.6 -2.8" src="#freesideimg" material="transparent: true" scale="1.6 1.1"></a-image> 
+      <a-entity  id="fsyear" text="value: Freeside Inc.; align:center; font: monoid; color: grey;" position="0 1.2 1" rotation="0 180 0"></a-entity>
+      <a-entity text="value: Creating new realities.; color: #d88; font:sourcecodepro; align:center" scale="5 5" position="0 1.6 2.8" rotation="-23 180 0"></a-entity>
+
+    </a-scene>
+      </div>
+  <div class="panel foot">
+    <span class="middle">Freeside Inc. <script>document.write(new Date().getFullYear())</script></span>
+  </div>
+  
+  
+  
+    <script>
+      var nowyear=new Date().getFullYear();
+      document.querySelector('#fsyear').addEventListener('loaded', function () {
+        document.querySelector("#fsyear").setAttribute("text", "value", "Freeside Inc. "+nowyear);
+      })    
+    </script>
+  
+  
+  </body>
+</html>
