@@ -27,7 +27,7 @@
           min-height: 66vh;
           font-size: 12pt;
         }
-        input, textarea {
+        input, textarea, label {
           font-family: courier new, courier, monospace;
           min-width: 360px;
           width: 50%;
@@ -93,8 +93,8 @@
           <div><input type="text" name="name" placeholder="Your name"></div>
           <div><input type="email" name="_replyto" placeholder="Your email"></div>
           <div><input type="text" name="company" placeholder="Your company"></div>
-          <div class="left">
-            Message:<br/>
+          <div>
+            <label class="left">Message:<br/></label>
             <textarea name="message" placeholder="What would you like to talk about?"></textarea>
           </div>
            <input type="hidden" name="_subject" value="Free-side.com Contact Form" />
