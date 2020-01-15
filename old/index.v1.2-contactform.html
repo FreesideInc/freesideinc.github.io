@@ -73,23 +73,17 @@
       <div class="panel contact">
         <h2>Contact Freeside</h2>
         <form  action="https://formspree.io/xqkpqlgy"  method="POST">
-          <label>Your Name: <input type="text" name="name"></label>
-          <label>
-            Your email:
-            <input type="text" name="_replyto">
-          </label>
-          <label>
-            Company:
-            <input type="text" name="company">
-          </label>
+          <div><input type="text" name="name" placeholder="Your name"></div>
+          <div><input type="email" name="_replyto" placeholder="Your email"></div>
+          <div><input type="text" name="company" placeholder="Your company"></div>
           <label>
             Your message:
-            <textarea name="message"></textarea>
+            <textarea name="message" placeholder="What would you like to talk about?"></textarea>
           </label>
 
   <!-- your other form fields go here -->
 
-          <button type="submit">Send</button>
+          <button type="submit">Send it!</button>
         </form>
       </div>
       
