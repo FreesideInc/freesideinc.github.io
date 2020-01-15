@@ -12,7 +12,7 @@
         html, body {
           border:0;margin:0;padding:0;
           xfont-family:  Candara, Roboto, sans-serif;
-          font-family: courier new, courier, monospace;
+          font-family: monospace;
           text-align: center;
         }
         .panel {
@@ -23,7 +23,13 @@
           display: grid;
         }
         .contact {
-        
+          height: auto;
+        }
+        input, textarea {
+          font-family: courier new, courier, monospace;
+          min-width: 360px;
+          width: 50%;
+          margin: 12pt;
         }
         .foot {
           height: 60pt;
@@ -77,12 +83,10 @@
           <div><input type="email" name="_replyto" placeholder="Your email"></div>
           <div><input type="text" name="company" placeholder="Your company"></div>
           <label>
-            Your message:
+            Your message:<br/>
             <textarea name="message" placeholder="What would you like to talk about?"></textarea>
           </label>
-
-  <!-- your other form fields go here -->
-
+           <input type="hidden" name="_subject" value="Free-side.com Contact Form" />
           <button type="submit">Send it!</button>
         </form>
       </div>
