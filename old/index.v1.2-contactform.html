@@ -27,13 +27,15 @@
           min-height: 66vh;
           font-size: 12pt;
         }
-        input, textarea, label {
+        input, textarea {
           font-family: courier new, courier, monospace;
-          min-width: 360px;
-          width: 50%;
           margin: 8pt;
           font-size: 11pt;
           padding: 3pt;
+        }
+        input, textarea, label {
+          min-width: 360px;
+          width: 50%;
         }
         textarea{
           min-height: 72pt;
@@ -48,6 +50,9 @@
         }
         .left {
           text-align: left;
+        }
+        form label .left {
+          display: inline-block;
         }
         .logo {
           width: 18vw; height: auto;
