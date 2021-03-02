@@ -31,7 +31,7 @@
 	}
         .contact {
           height: auto;
-          min-height: 66vh;
+          /*min-height: 66vh;*/
           font-size: 12pt;
         }
         form {margin-bottom: 16pt;}
@@ -78,6 +78,15 @@
 		      font-size: xx-small;
       	}
         a-scene { width:100%; height: 80vh;}
+
+div, a, span, form, input, button, table, p, h1, h2, h3, h4, h5, img {
+  transition: all 0.5s ease-in-out;
+}
+.contact{
+  display: none;
+  height: 0px;
+  overflow: hidden;
+}
 
 #mc_embed_signup_scroll {
   width: calc(50% + 3pt);
@@ -165,8 +174,9 @@
        
       </div>
       <div class="panel contact">
-        <h2>Contact Freeside</h2>
-        <form  action="https://formspree.io/xqkpqlgy"  method="POST">
+        <h2>Inquries and Contact</h2>
+	      <button id="showcontact" onclick="var cfrm=document.getElementbyID('contactform');cfrm.style.display='block';cfrm.style.height='auto';this.style.height='0px';this.style.display='none';">Reach out to Freeside</button>
+        <form  action="https://formspree.io/xqkpqlgy"  method="POST" id="contactform">
           <div><input type="text" name="name" placeholder="Your name"></div>
           <div><input type="email" name="_replyto" placeholder="Your email"></div>
           <div><input type="text" name="company" placeholder="Your company"></div>
