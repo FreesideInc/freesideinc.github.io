@@ -25,6 +25,8 @@
           font-size: 12pt;
           /*! margin: auto; */
           margin: auto;
+	  padding-top: 2em;
+	  padding-bottom: 2em;
         }
         div .panel {
 	     height: 88vh;
@@ -84,7 +86,7 @@ div, a, span, form, input, button, table, p, h1, h2, h3, h4, h5, img {
   transition: all 0.5s ease-in-out;
 }
 .contact form{
-  display: none;
+  visibility: hidden;
   height: 0px;
   overflow: hidden;
 }
@@ -177,7 +179,7 @@ div, a, span, form, input, button, table, p, h1, h2, h3, h4, h5, img {
       </div>
       <div class="panel contact">
         <h2>Inquries and Contact</h2>
-	      <div><button id="showcontact" onclick="var cfrm=document.getElementById('contactform');cfrm.style.display='block';cfrm.style.height='399pt';this.style.height='0px';this.style.display='none';">Reach out to Freeside</button></div>
+	      <div><button id="showcontact" onclick="var cfrm=document.getElementById('contactform');cfrm.style.visibility='visible';cfrm.style.height='399pt';this.style.height='0px';this.style.visibility='hidden';">Reach out to Freeside</button></div>
         <form  action="https://formspree.io/xqkpqlgy"  method="POST" id="contactform">
           <div><input type="text" name="name" placeholder="Your name"></div>
           <div><input type="email" name="_replyto" placeholder="Your email"></div>
